@@ -1,0 +1,31 @@
+{
+  "name": "api-gerador-sermoes",
+  "version": "1.0.0",
+  "description": "API para geração de sermões bíblicos com IA usando OpenRouter",
+  "type": "module",
+  "main": "api/generate.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "vercel build",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "sermao",
+    "biblia",
+    "ia",
+    "openrouter",
+    "vercel",
+    "api"
+  ],
+  "author": "Gerador de Sermões",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+}
