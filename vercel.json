@@ -1,27 +1,13 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "api/*.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/generate",
-      "dest": "/api/generate"
-    },
-    {
-      "src": "/api/generate",
-      "dest": "/api/generate"
-    }
-  ],
   "functions": {
-    "api/*.js": {
-      "runtime": "@vercel/node@latest"
+    "api/generate.js": {
+      "runtime": "edge"
     }
   },
-  "env": {
-    "OPENROUTER_API_KEY": "@openrouter_api_key"
-  }
+  "routes": [
+    {
+      "src": "/api/generate",
+      "dest": "api/generate.js"
+    }
+  ]
 }
